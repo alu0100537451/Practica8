@@ -1,0 +1,8 @@
+require 'lib/matriz'
+require 'lib/fraccionarios'
+
+m = Matriz.new([[1,1,1],[1,1,1],[1,1,1]])
+
+aux = Matriz.new([[1,2,3],[1,2,3],[1,2,3]])
+
+m * aux
