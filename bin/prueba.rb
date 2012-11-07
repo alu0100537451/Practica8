@@ -1,5 +1,5 @@
-require 'lib/matriz'
-require 'lib/fraccionarios'
+require 'matriz'
+require 'fraccionarios'
 
 m = Matriz.new([[1,1,1],[1,1,1],[1,1,1]])
 
