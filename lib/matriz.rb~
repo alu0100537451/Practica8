@@ -13,6 +13,24 @@ class Matriz
 		@matriz = m
 	end	
 
+	def + (other)
+	end
+
+	def * (other)
+	end
+
+end
+
+
+
+
+
+
+
+
+
+
+class MatrizEntera < Matriz
 
 #Suma matrices enteros
 #-------------------------------------------------------------------------------   
@@ -49,12 +67,11 @@ class Matriz
 	end
 
 
-
 #Multiplicacion matrices enteros
 #-------------------------------------------------------------------------------   
 	def * (other)
 		i=0
- 		copia = [[1,1,1],[1,1,1],[1,1,1]]
+ 		copia = Array.new(@filas) {Array.new(other.cols,0)}
 		while i < @filas
 			j=0
 			while j < other.cols
@@ -72,13 +89,23 @@ class Matriz
 		Matriz.new(copia)
 	end
 
+end
 
 
 
+
+
+
+
+
+
+
+
+class MatrizRacional < Matriz
 
 #Suma matrices racionales
 #-------------------------------------------------------------------------------   
-	def % (other)
+	def + (other)
 		i=0
  		copia = @matriz
 		while i < @filas
@@ -97,9 +124,9 @@ class Matriz
 
 #Multiplicacion de matrices racionales
 #-------------------------------------------------------------------------------   
-	def / (other)
+	def * (other)
 		i=0
- 		copia = [[1,1,1],[1,1,1],[1,1,1]]
+ 		copia = Array.new(@filas) {Array.new(other.cols,0)}
 		while i < @filas
 			j=0
 			while j < other.cols
@@ -117,9 +144,5 @@ class Matriz
 		end
 		Matriz.new(copia)
 	end
-
-
-
-
 
 end
